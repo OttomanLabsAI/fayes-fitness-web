@@ -1,0 +1,11 @@
+{
+  // Static-assets-only Worker: everything in ./public is served directly,
+  // no Worker script needed. https://developers.cloudflare.com/workers/static-assets/
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "fayes-fitness-web",
+  "compatibility_date": "2026-08-05",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}

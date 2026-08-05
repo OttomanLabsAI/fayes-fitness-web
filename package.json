@@ -1,0 +1,13 @@
+{
+  "name": "fayes-fitness-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Faye Edwards — F.I.T (Faye's Intentional Training) one-page site",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
