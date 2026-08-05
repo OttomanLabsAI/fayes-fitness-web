@@ -113,13 +113,8 @@ a{color:inherit}
 }
 .portrait img{
   width:100%;height:100%;object-fit:cover;
-  filter:grayscale(1) contrast(1.06) brightness(1.02);
 }
-.portrait::after{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(160deg,var(--flame),var(--tang));
-  mix-blend-mode:color;
-}
+/* bottom scrim only — keeps "Edwards" readable where it crosses the photo */
 .portrait::before{
   content:"";position:absolute;inset:0;z-index:2;
   background:linear-gradient(to top, rgba(25,16,33,.45), transparent 40%);
@@ -130,7 +125,7 @@ a{color:inherit}
 }
 .portrait.no-photo .fallback{display:grid}
 .portrait.no-photo{background:var(--ink-2);box-shadow:inset 0 0 0 2px rgba(255,75,36,.55),0 30px 60px -25px rgba(0,0,0,.7)}
-.portrait.no-photo::before,.portrait.no-photo::after{display:none}
+.portrait.no-photo::before{display:none}
 .hero-role{margin:24px auto 0;max-width:36ch;font-size:.92rem;color:var(--bone-soft)}
 .hero-chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 44px}
 .chip{
@@ -519,7 +514,7 @@ footer{background:var(--ink);color:var(--bone);padding:64px var(--pad) 110px}
 [data-theme="edit"] .chip{border-color:rgba(22,22,22,.3);border-radius:0}
 [data-theme="edit"] .hero-name .w2{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--flame);font-style:italic}
 [data-theme="edit"] .portrait{border-radius:4px;box-shadow:none;border:1px solid rgba(22,22,22,.25)}
-[data-theme="edit"] .portrait::before,[data-theme="edit"] .portrait::after{display:none}
+[data-theme="edit"] .portrait::before{display:none}
 [data-theme="edit"] .portrait .fallback{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--flame);font-family:"Fraunces",serif;font-style:italic}
 [data-theme="edit"] .marquee{transform:none;background:transparent;color:var(--ink);border-top:1px solid rgba(22,22,22,.25);border-bottom:1px solid rgba(22,22,22,.25);font-weight:500;font-size:.64rem;letter-spacing:.24em}
 [data-theme="edit"] .section,[data-theme="edit"] .section.sand,[data-theme="edit"] .section.dark{background:var(--bone);color:var(--ink);border-top:1px solid rgba(22,22,22,.18)}
@@ -566,7 +561,6 @@ footer{background:var(--ink);color:var(--bone);padding:64px var(--pad) 110px}
 [data-theme="neon"] .hero::before{background:radial-gradient(60% 60% at 50% 100%, rgba(200,255,22,.16), transparent 70%)}
 [data-theme="neon"] .hero-name .w2{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--flame)}
 [data-theme="neon"] .portrait{border-radius:0;border:3px solid var(--flame);box-shadow:10px 10px 0 var(--flame)}
-[data-theme="neon"] .portrait::after{background:var(--flame);mix-blend-mode:multiply}
 [data-theme="neon"] .portrait .fallback{background:none;-webkit-background-clip:initial;background-clip:initial;color:var(--flame)}
 [data-theme="neon"] .chip{border-radius:0;border-color:rgba(200,255,22,.5)}
 [data-theme="neon"] .marquee{transform:none;background:var(--flame);color:#0B0B0B}
