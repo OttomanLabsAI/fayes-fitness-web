@@ -705,3 +705,13 @@ footer{background:var(--ink);color:var(--bone);padding:64px var(--pad) 110px}
 .photo.lead{margin:0 0 26px}
 .photo + .card{margin-top:26px}
 .photo img[loading="eager"]{aspect-ratio:auto}
+
+/* /why — before/after comparison rows */
+.vs{display:grid;gap:12px;margin-top:20px}
+.vs-row{border:1.5px dashed rgba(25,16,33,.28);border-radius:14px;padding:14px 16px}
+[data-theme="fit"] .vs-row{border-color:rgba(253,242,248,.3)}
+.vs-row .mono{display:block;color:var(--ink-soft);margin-bottom:6px}
+.vs-row .old{display:block;color:var(--ink-soft)}
+.vs-row .old::before{content:"✗";margin-right:8px;opacity:.7}
+.vs-row .new{display:block;font-weight:800;margin-top:4px}
+.vs-row .new::before{content:"✓";margin-right:8px;color:var(--flame)}
