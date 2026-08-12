@@ -7,15 +7,36 @@ HTML page (no build step, no framework), deployed to Cloudflare Workers as stati
 
 ```
 public/
-  index.html   the whole site — markup, CSS and JS in one file
-  404.html     not-found page
-  _headers     cache + security headers
-wrangler.jsonc Cloudflare Workers config (static assets only)
+  index.html          the home page
+  links.html          /links — every destination in one place
+  fit-camp.html       /fit-camp
+  academy.html        /academy
+  community.html      /community
+  app.html            /app
+  webinar.html        /webinar
+  the-book.html       /the-book
+  watch.html          /watch
+  retreats/
+    zanzibar.html     /retreats/zanzibar
+    bulgaria.html     /retreats/bulgaria
+  assets/fit.css      the whole design system, shared by every page
+  404.html            not-found page
+  _headers            cache + security headers
+wrangler.jsonc        Cloudflare Workers config (static assets only)
 ```
 
-Everything the page renders lives in `public/index.html`. Fonts come from Google Fonts,
-the hero portrait and video thumbnail are remote URLs, and every CTA links out
-(Bookwhen, Flodesk, the F.I.T app, YouTube, TikTok, Amazon).
+There is no build step and no templating — each page is plain HTML sharing one
+stylesheet. Fonts come from Google Fonts, the hero portrait and video thumbnail are
+remote URLs, and the calls to action link out (Bookwhen, Flodesk, the F.I.T app,
+YouTube, TikTok, Amazon).
+
+Each inner page is a landing page for one destination: it carries the details the
+site knows and then hands off to wherever the booking or signup actually happens.
+Their copy came from the home page, so **anything richer — prices, itineraries,
+what's included — still needs writing.**
+
+Adding a page: copy the closest existing one, change the copy, and add it to the
+`.foot-nav` list in every page's footer and to the `.hub` list in `links.html`.
 
 ## Local preview
 
@@ -35,6 +56,9 @@ npx wrangler deploy
 ```
 
 ## Editing the content
+
+Note that most content now lives in two places — the home page section and the
+inner page — so a date change means editing both.
 
 | What | Where in `public/index.html` |
 | --- | --- |
