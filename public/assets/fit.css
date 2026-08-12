@@ -238,7 +238,7 @@ body[data-theme="soft"] .set-postcard{display:grid}
 .poster .scene{aspect-ratio:4/3;overflow:hidden}
 .poster .scene svg{display:block;width:100%;height:100%;transition:transform .6s ease}
 .poster:hover .scene svg{transform:scale(1.05)}
-.poster .steam{animation:steam 4s ease-in-out infinite alternate}
+.poster .steam,.trip-scene .steam{animation:steam 4s ease-in-out infinite alternate}
 @keyframes steam{to{transform:translateY(-9px)}}
 .p-body{padding:20px 26px 30px;text-align:center}
 .p-kicker{display:block;margin-bottom:6px}
@@ -247,7 +247,7 @@ body[data-theme="soft"] .set-postcard{display:grid}
 .p-body h3{font-size:clamp(2rem,7.6vw,2.6rem)}
 .p-body .ticket{text-align:left;margin-top:18px}
 .p-go{display:inline-block;margin-top:20px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;font-size:.8rem;border-bottom:2px solid var(--flame);padding-bottom:4px}
-@media (prefers-reduced-motion:reduce){.poster .steam{animation:none}.poster .scene svg{transition:none}}
+@media (prefers-reduced-motion:reduce){.poster .steam,.trip-scene .steam{animation:none}.poster .scene svg{transition:none}}
 /* retreats — boarding passes */
 .pass{position:relative;display:flex;margin-top:26px;background:#FFFDF7;border-radius:16px;overflow:hidden;text-decoration:none;color:var(--ink);box-shadow:0 26px 52px -30px rgba(25,16,33,.5);border-left:8px solid var(--acc,var(--flame))}
 .pass-znz{--acc:var(--lagoon)}
@@ -660,3 +660,11 @@ footer{background:var(--ink);color:var(--bone);padding:64px var(--pad) 110px}
 }
 .foot-nav a{color:var(--bone-soft);text-decoration:none;font-size:.78rem}
 .foot-nav a:hover{color:var(--bone)}
+
+/* trip pages — the destination artwork */
+.trip-scene{
+  border-radius:var(--radius);overflow:hidden;margin-bottom:26px;
+  box-shadow:0 26px 52px -30px rgba(25,16,33,.55);
+}
+[data-theme="fit"] .trip-scene{border-radius:18px;border:1px solid rgba(255,45,135,.35);box-shadow:none}
+.trip-scene svg{display:block;width:100%;height:auto}
