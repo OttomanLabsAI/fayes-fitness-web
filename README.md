@@ -26,14 +26,19 @@ wrangler.jsonc        Cloudflare Workers config (static assets only)
 ```
 
 There is no build step and no templating — each page is plain HTML sharing one
-stylesheet. Fonts come from Google Fonts, the hero portrait and video thumbnail are
-remote URLs, and the calls to action link out (Bookwhen, Flodesk, the F.I.T app,
-YouTube, TikTok, Amazon).
+stylesheet. Fonts come from Google Fonts, and the hero portrait and video thumbnail
+are remote URLs.
 
-Each inner page is a landing page for one destination: it carries the details the
-site knows and then hands off to wherever the booking or signup actually happens.
-Their copy came from the home page, so **anything richer — prices, itineraries,
-what's included — still needs writing.**
+The home page's calls to action route to the inner pages; each inner page carries
+the real details and then hands off to where the action happens — booking on
+Bookwhen (`bookwhen.com/fayesintentionaltraining`), brochures and signups on
+Flodesk, the app on `gcph.tv` plus the App Store / Google Play, the book on
+Amazon. `/links` is the link-in-bio page: it replaces the Linktree.
+
+Inner-page copy was rebuilt from Faye's public pages (fayeedwards.co.uk, the
+Bookwhen listings, the Zen Zanzibar retreat page, the app-store listings and the
+book's publisher description). Prices and itineraries for the trips are only in
+the Flodesk brochures, so those pages still hand off for the full picture.
 
 Adding a page: copy the closest existing one, change the copy, and add it to the
 `.foot-nav` list in every page's footer and to the `.hub` list in `links.html`.
@@ -64,7 +69,7 @@ inner page — so a date change means editing both.
 | --- | --- |
 | F.I.T Camp date + countdown | `Thu 6 August` in the camp ticket, and `new Date(2026,7,6,...)` in the countdown script (month is 0-indexed) |
 | Retreat dates / destinations | the `.set-*` blocks in the "Train somewhere beautiful" section |
-| Booking link | `fayesfitness.bookwhen.com` — appears in the top bar, camp CTA and sticky CTA |
+| Booking link | `bookwhen.com/fayesintentionaltraining` — top bar here, and the CTAs on `fit-camp.html` / `webinar.html` |
 | App price | `.price-chip` in the F.I.T App section |
 | Video | YouTube ID `C7QkwNTu8wk` (thumbnail `src` and the embed URL in the script) |
 | Contact / socials | the `footer` block |
