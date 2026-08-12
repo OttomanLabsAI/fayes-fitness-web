@@ -700,3 +700,8 @@ footer{background:var(--ink);color:var(--bone);padding:64px var(--pad) 110px}
 .photo-grid .ph{border-radius:14px;overflow:hidden;aspect-ratio:1/1}
 [data-theme="fit"] .photo-grid .ph{border:1px solid rgba(255,45,135,.35)}
 .photo-grid img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* photo as page-top hero */
+.photo.lead{margin:0 0 26px}
+.photo + .card{margin-top:26px}
+.photo img[loading="eager"]{aspect-ratio:auto}
