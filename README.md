@@ -29,16 +29,22 @@ There is no build step and no templating — each page is plain HTML sharing one
 stylesheet. Fonts come from Google Fonts, and the hero portrait and video thumbnail
 are remote URLs.
 
-The home page's calls to action route to the inner pages; each inner page carries
-the real details and then hands off to where the action happens — booking on
-Bookwhen (`bookwhen.com/fayesintentionaltraining`), brochures and signups on
-Flodesk, the app on `gcph.tv` plus the App Store / Google Play, the book on
-Amazon. `/links` is the link-in-bio page: it replaces the Linktree.
+The home page's calls to action route to the inner pages, and the inner pages ARE
+the destination — nothing links back out to the old Flodesk pages. Retreat
+reservations, academy and community signups all go by email to Faye (mailto CTAs
+with prefilled subjects). The only remaining external handoffs are genuine points
+of transaction: paying for classes on Bookwhen
+(`bookwhen.com/fayesintentionaltraining`), the app on `gcph.tv` / App Store /
+Google Play, the book on Amazon, and the social platforms. `/links` is the
+link-in-bio page: it replaces the Linktree.
 
 Inner-page copy was rebuilt from Faye's public pages (fayeedwards.co.uk, the
 Bookwhen listings, the Zen Zanzibar retreat page, the app-store listings and the
-book's publisher description). Prices and itineraries for the trips are only in
-the Flodesk brochures, so those pages still hand off for the full picture.
+book's publisher description). The old Flodesk trip brochures could not be read
+from this environment, so trip prices and itineraries are not on the site yet —
+add them to the retreat pages when available. If signups should feed Flodesk
+automations rather than Faye's inbox, replace the mailto CTAs with Flodesk's
+embed snippets (Flodesk dashboard → Form → Embed).
 
 Adding a page: copy the closest existing one, change the copy, and add it to the
 `.foot-nav` list in every page's footer and to the `.hub` list in `links.html`.
