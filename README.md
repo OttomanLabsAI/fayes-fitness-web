@@ -56,6 +56,10 @@ needs (`twin-pay-in-full`, `twin-instalments`, `double-pay-in-full`, …, marked
 with a `TODO` comment in `public/retreats/bulgaria.html`). Paste the real URLs
 from the brochure email into those `href`s.
 
+The five Zanzibar photos are hotlinked from the brochure's public Flodesk CDN
+(`usercontent.flodesk.com` — each image removes itself from the layout if it
+ever fails to load). For durability, download them and serve from `public/assets/`.
+
 Both brochures also say "deposit by 31 July" — that's reproduced as-is on the
 trip pages; update or remove it if the deadline has moved.
 
