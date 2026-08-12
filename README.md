@@ -38,13 +38,26 @@ of transaction: paying for classes on Bookwhen
 Google Play, the book on Amazon, and the social platforms. `/links` is the
 link-in-bio page: it replaces the Linktree.
 
-Inner-page copy was rebuilt from Faye's public pages (fayeedwards.co.uk, the
-Bookwhen listings, the Zen Zanzibar retreat page, the app-store listings and the
-book's publisher description). The old Flodesk trip brochures could not be read
-from this environment, so trip prices and itineraries are not on the site yet —
-add them to the retreat pages when available. If signups should feed Flodesk
-automations rather than Faye's inbox, replace the mailto CTAs with Flodesk's
-embed snippets (Flodesk dashboard → Form → Embed).
+Inner-page copy was rebuilt from Faye's own materials: her public pages
+(fayeedwards.co.uk, the Bookwhen listings, the app-store listings, the book's
+publisher description) plus the trip brochures themselves — the retreat pages
+carry the brochures' full content: prices, deposits, instalments, what's
+included, room types. If signups should feed Flodesk automations rather than
+Faye's inbox, replace the mailto CTAs with Flodesk's embed snippets (Flodesk
+dashboard → Form → Embed).
+
+### Placeholder booking links on `/retreats/bulgaria`
+
+The brochure sells each room type through its own booking link (pay in full or
+instalments — eight links total). Those URLs weren't in the source I was given,
+so the eight buttons currently point at the Bookwhen schedule as a working
+placeholder. Each button carries a `data-replace` attribute naming the link it
+needs (`twin-pay-in-full`, `twin-instalments`, `double-pay-in-full`, …, marked
+with a `TODO` comment in `public/retreats/bulgaria.html`). Paste the real URLs
+from the brochure email into those `href`s.
+
+Both brochures also say "deposit by 31 July" — that's reproduced as-is on the
+trip pages; update or remove it if the deadline has moved.
 
 Adding a page: copy the closest existing one, change the copy, and add it to the
 `.foot-nav` list in every page's footer and to the `.hub` list in `links.html`.

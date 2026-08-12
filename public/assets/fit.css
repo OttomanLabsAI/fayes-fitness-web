@@ -668,3 +668,25 @@ footer{background:var(--ink);color:var(--bone);padding:64px var(--pad) 110px}
 }
 [data-theme="fit"] .trip-scene{border-radius:18px;border:1px solid rgba(255,45,135,.35);box-shadow:none}
 .trip-scene svg{display:block;width:100%;height:auto}
+
+/* rebuilt trip pages — stacked cards, checklists, pillars, purchase grid */
+.section-inner .card + .card{margin-top:26px}
+.prose .inc{list-style:none;margin-top:16px;padding:0;display:grid;grid-template-columns:1fr;gap:9px 20px}
+@media (min-width:560px){.prose .inc{grid-template-columns:1fr 1fr}}
+.inc li{position:relative;padding-left:24px;color:var(--ink-soft)}
+.inc li::before{content:"✓";position:absolute;left:0;top:0;color:var(--flame);font-weight:800}
+.pillars{display:grid;gap:12px;margin-top:20px}
+@media (min-width:560px){.pillars{grid-template-columns:repeat(3,1fr)}}
+.pillar{border:1.5px dashed rgba(25,16,33,.28);border-radius:14px;padding:14px 16px}
+[data-theme="fit"] .pillar{border-color:rgba(253,242,248,.3)}
+.pillar .mono{display:block;color:var(--tang);margin-bottom:4px}
+.pillar b{font-size:1rem}
+.pillar p{font-size:.85rem;margin-top:4px}
+.buy{display:grid;gap:12px;margin-top:20px}
+.buy-row{display:flex;align-items:center;justify-content:space-between;gap:10px 14px;flex-wrap:wrap;border:1.5px dashed rgba(25,16,33,.28);border-radius:14px;padding:14px 16px}
+[data-theme="fit"] .buy-row{border-color:rgba(253,242,248,.3)}
+.buy-row .room .mono{display:block;color:var(--ink-soft);margin-bottom:2px}
+.buy-row .room b{font-size:1.05rem}
+.buy-row .opts{display:flex;gap:8px;flex-wrap:wrap}
+.btn.small{padding:11px 16px;font-size:.66rem}
+.note{margin-top:14px;font-size:.8rem;color:var(--ink-soft)}
